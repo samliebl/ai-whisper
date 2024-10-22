@@ -22,17 +22,17 @@ Users can download the transcription as a `.txt` file, with a filename that incl
 The app supports common audio file formats, such as `m4a`, `mp3`, `wav`, `ogg`, etc.
 
 #### Contents
-- [Installation](#installation "Installation")
-- [Usage](#usage "Usage")
-- [Environment Variables](#environment-variables "Environment Variables")
-- [File Upload Handling](#file-upload-handling "File Upload Handling")
-- [Dynamic Transcription Filename](#dynamic-transcription-filename "Dynamic Transcription Filename")
-- [Downloadable Transcription](#downloadable-transcription "Downloadable Transcription")
-- [Error Handling](#error-handling "Error Handling")
-- [Supported Audio Formats](#supported-audio-formats "Supported Audio Formats")
-- [Known Issues](#known-issues "Known Issues")
-- [Contributing](#contributing "Contributing")
-- [License](#license "License")
+1. [Installation](#installation "Installation")
+1. [Usage](#usage "Usage")
+1. [Environment variables](#environment-variables "Environment Variables")
+1. [Dynamically creating filename from transcription + timestamp](#file-upload-handling "Dynamically creating filename from transcription + timestamp")
+1. [Downloadable transcription as plain text file](#dynamic-transcription-filename "Downloadable transcription as plain text file")
+1. [Downloadable transcription](#downloadable-transcription "Downloadable Transcription")
+1. [Error handling](#error-handling "Error Handling")
+1. [Supported audio formats](#supported-audio-formats "Supported Audio Formats")
+1. [Known issues](#known-issues "Known Issues")
+1. [Contributing](#contributing "Contributing")
+1. [License](#license "License")
 
 ---
 
@@ -45,7 +45,7 @@ Follow these steps to install and run the app on your local machine:
 - Node.js (version 16 or higher)
 - An OpenAI API key (You can generate this by signing up for OpenAI [here](https://platform.openai.com/signup))
 
-### Step-by-Step Setup
+### Step-by-step setup
 
 1. **Clone the repository**:
 ```bash
@@ -86,12 +86,12 @@ node server.js
 4. Once the transcription is complete, the result will be displayed on the screen.
 5. A download link will appear allowing you to download the transcription as a `.txt` file.
 
-## Environment Variables
+## Environment variables
 The application uses a `.env` file to store sensitive information like the OpenAI API key. The following environment variable needs to be set:
 
 - `OPENAI_API_KEY`: Your API key from OpenAI, which is required to use Whisper.
 
-## File Upload Handling
+## File upload handling
 We use **Multer** to handle file uploads. Files are temporarily stored in the `uploads/` directory. The app processes the uploaded file by sending it to the Whisper API for transcription.
 
 Here’s a quick breakdown of the process:
@@ -99,7 +99,7 @@ Here’s a quick breakdown of the process:
 - Multer stores the file in the `uploads/` directory.
 - The server reads the file and sends it to OpenAI’s Whisper API for transcription.
 
-### Supported Audio Formats
+### Supported audio formats
 
 The Whisper API supports the following audio file formats:
 - `.flac`
@@ -113,7 +113,7 @@ The Whisper API supports the following audio file formats:
 - `.wav`
 - `.webm`
 
-## Dynamic Transcription Filename
+## Dynamically creating filename from transcription + timestamp
 Once the transcription is successfully generated, a `.txt` file containing the transcription is saved in the `uploads/` directory. The filename is dynamically generated based on:
 - The **first three words** of the transcription (spaces are replaced by underscores `_`).
 - A **timestamp** in the format `YYYY-MM-DD--minutes-seconds`.
@@ -123,7 +123,7 @@ For example, a transcription that starts with "Four score and seven" and was tra
 Four_score_and_2024-10-15--25-05.txt
 ```
 
-## Downloadable Transcription
+## Downloadable transcription as plain text file
 Once the transcription is generated, the app provides a download link so users can download the transcription in plain text format. The text file contains only the transcription text and no additional content (e.g., no labels like "Transcription Result").
 
 ### Example:
