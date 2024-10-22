@@ -1,3 +1,12 @@
 node_modules
 .env
 .DS_Store
+
+# Ignore all files inside the uploads directory
+uploads/*
+
+# But keep the uploads directory itself
+!uploads/
+
+# Ignore any hidden files like .DS_Store (Mac) or Thumbs.db (Windows)
+!uploads/.gitkeep
