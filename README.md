@@ -33,6 +33,9 @@ The app supports common audio file formats, such as `m4a`, `mp3`, `wav`, `ogg`, 
 1. [Known issues](#known-issues "Known Issues")
 1. [Contributing](#contributing "Contributing")
 1. [License](#license "License")
+1. [Appendices](#appendices "Appendices")
+   1. Notes
+   1. Acknowledgments
 
 ---
 
@@ -165,11 +168,17 @@ Please follow the project's coding conventions. Also include appropriate tests.
 ## License
 MIT.
 
----
+## Appendices
 
 #### Notes
 
 1. To test all this, I used the Gettysburg address by Abraham Lincoln. If you see things like four score and seven years ago, that's where that's coming from.
+
+#### Acknowledgements
+
+![](https://saml.nyc3.digitaloceanspaces.com/whisper-ai.jpg)
+
+Whisper AI by OpenAI
 
 ---
 
