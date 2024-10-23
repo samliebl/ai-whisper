@@ -115,7 +115,7 @@ The Whisper API supports the following audio file formats:
 
 ## Dynamically creating filename from transcription + timestamp
 Once the transcription is successfully generated, a `.txt` file containing the transcription is saved in the `uploads/` directory. The filename is dynamically generated based on:
-- The **first three words** of the transcription (spaces are replaced by underscores `_`).
+- The **first three words**¹ of the transcription (spaces are replaced by underscores `_`).
 - A **timestamp** in the format `YYYY-MM-DD--minutes-seconds`.
 
 For example, a transcription that starts with "Four score and seven" and was transcribed at `2024-10-15 14:25:05` will be saved as:
@@ -165,3 +165,12 @@ Please follow the project's coding conventions. Also include appropriate tests.
 ## License
 MIT.
 
+---
+
+#### Notes
+
+1. To test all this, I used the Gettysburg address by Abraham Lincoln. If you see things like four score and seven years ago, that's where that's coming from.
+
+---
+
+Thank you! • SL
