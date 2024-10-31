@@ -176,9 +176,9 @@ MIT.
 
 #### Acknowledgements
 
-![](https://saml.nyc3.digitaloceanspaces.com/whisper-ai.jpg)
-
 Whisper AI by OpenAI
+
+At various points I tested the transcription quality with poems by [Osip Mandelstam](https://www.poetryfoundation.org/poets/osip-mandelstam).
 
 ---
 
